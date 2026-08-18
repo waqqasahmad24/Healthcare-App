@@ -1,0 +1,413 @@
+/* ==========================================================================
+   PRODUCT DETAIL PAGE SPECIFIC STYLES
+   ========================================================================= */
+
+.product-detail-section {
+    padding: 60px 0 100px;
+    background-color: #f8fafc;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+
+/* Image Container */
+.detail-image-box {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+}
+
+.detail-image-box img {
+    max-width: 100%;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.detail-image-box:hover img {
+    transform: scale(1.02);
+}
+
+/* Detail Info Column */
+.detail-info-box {
+    padding-top: 10px;
+}
+
+.detail-info-box .tag {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.detail-info-box h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.detail-info-box .detail-price {
+    font-size: 32px;
+    font-weight: 800;
+    color: #123d68;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.detail-info-box .detail-price span.label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.detail-info-box .detail-desc {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 24px;
+}
+
+/* Benefits Section */
+.benefits-container {
+    margin-bottom: 35px;
+}
+
+.benefits-container h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.benefits-list li {
+    font-size: 15px;
+    color: #475569;
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.5;
+}
+
+.benefits-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #16a34a;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Purchase Control Row */
+.purchase-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+}
+
+/* Quantity Selector */
+.qty-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 52px;
+    background: #ffffff;
+}
+
+.qty-btn {
+    border: none;
+    background: none;
+    color: #475569;
+    width: 45px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.qty-btn:hover {
+    background: #f1f5f9;
+}
+
+.qty-input {
+    width: 50px;
+    height: 100%;
+    border: none;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+    outline: none;
+}
+
+/* Add to Cart Button */
+.add-cart-btn {
+    background: #123d68;
+    color: #ffffff;
+    border: none;
+    padding: 0 35px;
+    height: 52px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(18, 61, 104, 0.15);
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.add-cart-btn:hover {
+    background: #0d2d4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(18, 61, 104, 0.25);
+}
+
+.add-cart-btn:active {
+    transform: translateY(0);
+}
+
+/* Supplementary Tabs or Lists (Ingredients, Specs, Dosage) */
+.specs-section {
+    border-top: 1px solid #cbd5e1;
+    padding-top: 50px;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.spec-block {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.01);
+    margin-bottom: 30px;
+}
+
+.spec-block h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Dosage Callout */
+.dosage-callout {
+    background: #eff6ff;
+    border-left: 4px solid #1d4ed8;
+    padding: 20px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 30px;
+}
+
+.dosage-callout h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+.dosage-callout p {
+    font-size: 14px;
+    color: #1e3a8a;
+    line-height: 1.5;
+}
+
+/* Dynamic Tables styling */
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.spec-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.spec-table tr:last-child {
+    border-bottom: none;
+}
+
+.spec-table td {
+    padding: 12px 0;
+    font-size: 15px;
+    color: #475569;
+}
+
+.spec-table td.label-col {
+    font-weight: 600;
+    color: #0f172a;
+    width: 40%;
+}
+
+/* Ingredients List styling */
+.ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ingredients-table th {
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 2px solid #e2e8f0;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ingredients-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 15px;
+    color: #475569;
+}
+
+.ingredients-table tr:last-child td {
+    border-bottom: none;
+}
+
+.ingredients-table td.amount-col {
+    text-align: right;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.toast {
+    background: #ffffff;
+    border-left: 4px solid #16a34a;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transform: translateX(120%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    min-width: 300px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast-icon {
+    background: #dcfce7;
+    color: #16a34a;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.toast-content h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.toast-content p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .detail-image-box img {
+        height: 350px;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-image-box {
+        padding: 20px;
+    }
+
+    .detail-image-box img {
+        height: 260px;
+    }
+
+    .detail-info-box h1 {
+        font-size: 28px;
+    }
+
+    .purchase-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .qty-selector {
+        justify-content: center;
+    }
+}

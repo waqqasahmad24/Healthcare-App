@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Human Care Labs</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product.css">
+
+    <!-- Session Guard Script -->
+    <script src="../script.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Human Care Labs Logo">
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../about-us.html">About Us</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../home.html#categories" class="active">Products</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center;">
+            <div class="cart-dropdown-wrapper">
+                <div class="cart-icon" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </div>
+                <div class="dropdown-menu cart-menu" id="cartMenu">
+                    <div class="cart-items-list" id="cartItemsList">
+                        <div class="empty-cart-msg">Your cart is empty.</div>
+                    </div>
+                    <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+            <div class="user-dropdown-wrapper">
+            <div class="user-icon" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <div class="dropdown-menu">
+                <button id="logoutBtn" class="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <div class="category-intro" style="padding: 30px 0 0; background-color: #f8fafc;">
+        <div class="container">
+            <ul class="breadcrumb"
+                style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #64748b; list-style: none;">
+                <li><a href="../home.html" style="color: #123d68; text-decoration: none; font-weight: 500;">Home</a>
+                </li>
+                <li style="color: #94a3b8;">/</li>
+                <li><a href="#" id="breadcrumbCategory"
+                        style="color: #123d68; text-decoration: none; font-weight: 500;">Category</a></li>
+                <li style="color: #94a3b8;">/</li>
+                <li id="breadcrumbProduct" style="color: #64748b;">Product Name</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+
+            <div class="detail-grid">
+
+                <!-- Left: Large Image Card -->
+                <div class="detail-image-box">
+                    <img id="productImage" src="" alt="Product Image">
+                </div>
+
+                <!-- Right: Content & Pricing -->
+                <div class="detail-info-box">
+                    <span class="tag" id="productBadge">Premium Formulation</span>
+                    <h1 id="productTitle">Product Title</h1>
+
+                    <div class="detail-price">
+                        <span class="label">Price:</span>
+                        <span id="productPrice">$0.00</span>
+                    </div>
+
+                    <p class="detail-desc" id="productDescription">
+                        Detailed product explanation.
+                    </p>
+
+                    <!-- Key Benefits -->
+                    <div class="benefits-container">
+                        <h3>Key Benefits & Outcomes</h3>
+                        <ul class="benefits-list" id="benefitsList">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </div>
+
+                    <!-- Quantity & Add to Cart Action Bar -->
+                    <div class="purchase-row">
+                        <div class="qty-selector">
+                            <button type="button" class="qty-btn" id="qtyMinus">-</button>
+                            <input type="text" class="qty-input" id="qtyInput" value="1" readonly>
+                            <button type="button" class="qty-btn" id="qtyPlus">+</button>
+                        </div>
+                        <button type="button" class="add-cart-btn" id="addToCartBtn">
+                            <span>🛒</span> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Back Navigation Button -->
+                    <div style="margin-top: 25px;">
+                        <a href="#" id="backToCategoryBtn"
+                            style="color: #64748b; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-size: 15px; transition: color 0.2s;">
+                            ← Back to Category
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom Specs, Ingredients, Dosage Section -->
+            <div class="specs-section">
+                <div class="specs-grid">
+
+                    <!-- Left: Ingredients and Dosage -->
+                    <div>
+                        <!-- Active Ingredients -->
+                        <div class="spec-block">
+                            <h3>Active Ingredients</h3>
+                            <table class="ingredients-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ingredient</th>
+                                        <th style="text-align: right;">Amount Per Serving</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ingredientsBody">
+                                    <!-- Populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Dosage Box -->
+                        <div class="dosage-callout">
+                            <h4>Suggested Clinical Dosage</h4>
+                            <p id="dosageText">Dosage instruction details.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Product Specifications Table -->
+                    <div class="spec-block">
+                        <h3>Specifications</h3>
+                        <table class="spec-table">
+                            <tbody id="specificationsBody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Success Toast Notifications Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <footer>
+        <div>
+            <h2>Human Care Laboratories</h2>
+            <p>Advanced GMP-certified nutraceutical manufacturing based in Peshawar.</p>
+        </div>
+        <ul>
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="../home.html#categories">Products</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </footer>
+
+    <!-- Script loading logic -->
+    <script src="../js/product-detail.js" defer></script>
+</body>
+
+</html>

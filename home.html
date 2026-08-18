@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Human Care Labs</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Human Care Labs Logo">
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>div {
+  /* existing styles */
+}
+
+
+
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="home.html#categories">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center;">
+            <div class="cart-dropdown-wrapper">
+                <div class="cart-icon" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </div>
+                <div class="dropdown-menu cart-menu" id="cartMenu">
+                    <div class="cart-items-list" id="cartItemsList">
+                        <div class="empty-cart-msg">Your cart is empty.</div>
+                    </div>
+                    <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+            <div class="user-dropdown-wrapper">
+            <div class="user-icon" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <div class="dropdown-menu">
+                <button id="logoutBtn" class="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION (FIRST PAGE) ================= -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <span class="tag">Clinical Excellence</span>
+                <h1>Human care laboratories</h1>
+                <p>
+                    Advanced research-driven manufacturing facility in Peshawar, delivering GMP-certified dietary
+                    supplements to the global health and wellness market.
+                </p>
+                <div class="hero-buttons">
+                    <button class="primary-btn">Shop Products</button>
+                    <button class="outline-btn">Request Wholesale Pricing</button>
+                </div>
+                <div class="partners">
+                    <div class="avatar-group">
+
+                    </div>
+                    <p class="partners-text">
+                        <strong>500+</strong> B2B Partners Trusted Locally & Globally
+                    </p>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="image-wrapper">
+                    <img src="images/AB6AXuCeKKjdOfDxNGVZYojNSuGQScLvglBsXSZE8Eg8Zr2KCGP_Q7dMm6r_wiopmxd1QjmFGNuZHLzEYhkBg82YhQAuslBmLmj2NueFdvDD8F7yO-FHPGPPBecSHrPpubJ0zMebl9XMsAVCMmMlG1zT0TReNUkLx_NTusMyuEUsqwCnrga2Yeu5HA6d9dj-xAi5SDsNTL3Q2jPaQh-V8ipKN.png"
+                        alt="Manufacturing Line" class="hero-img">
+                    <div class="floating-card">
+                        <div class="floating-icon">✔</div>
+                        <div class="floating-content">
+                            <h4>GMP Certified</h4>
+                            <p>Standardized manufacturing protocols for global compliance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCT CATEGORIES (SECOND PAGE) ================= -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Product Categories</h2>
+                <p class="section-subtitle">
+                    Diverse formulations across multiple delivery systems,
+                    engineered for maximum bioavailability.
+                </p>
+            </div>
+
+            <div class="category-grid">
+
+                <!-- Advanced Multivitamins -->
+                <div class="category-card big-card" onclick="openCategory('multivitamins')">
+
+                    <img src="images/Background.png" alt="Advanced Multivitamins">
+
+                    <div class="overlay">
+                        <h3>Advanced Multivitamins</h3>
+                        <p>
+                            Precision formulated for targeted demographics
+                            and specific health outcomes.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Clinical Syrups -->
+                <div class="category-card small-card" onclick="openCategory('clinical-syrups')">
+
+                    <img src="images/1.png" alt="Clinical Syrups">
+
+                    <div class="overlay">
+                        <h3>Clinical Syrups</h3>
+                    </div>
+
+                </div>
+
+                <!-- Protein Bars -->
+                <div class="category-card small-card" onclick="openCategory('protein-bars')">
+
+                    <img src="images/2.png" alt="Protein Bars">
+
+                    <div class="overlay">
+                        <h3>Protein Bars</h3>
+                    </div>
+
+                </div>
+
+                <!-- Specialty Supplements -->
+                <div class="category-card big-card" onclick="openCategory('specialty-supplements')">
+
+                    <img src="images/3.png" alt="Specialty Supplements">
+
+                    <div class="overlay">
+                        <h3>Specialty Supplements</h3>
+
+                        <p>
+                            Focusing on immunity,
+                            digestive health,
+                            and athletic performance optimization.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= MANUFACTURING EXCELLENCE (THIRD PAGE) ================= -->
+    <section class="excellence">
+        <div class="container excellence-grid">
+            <div class="excellence-left">
+                <div class="excellence-images">
+                    <div class="main-image">
+                        <img src="images/hospital.png" alt="Peshawar Facility Overview">
+                    </div>
+                    <div class="sub-images">
+                        <div class="sub-image-box">
+                            <img src="images/manufcaturing-tank.png" alt="Manufacturing Tanks">
+                        </div>
+                        <div class="sub-image-box">
+                            <img src="images/docotor.png" alt="Quality Control Lab">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="excellence-right">
+                <h2>Manufacturing Excellence in Peshawar</h2>
+                <p class="excellence-desc">
+                    Our Peshawar-based facility stands as a beacon of clinical manufacturing in the region. Spanning
+                    over 50,000 sq. ft., we integrate traditional wisdom with modern scientific precision.
+                </p>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>GMP</h3>
+                        <p>Certified Facility</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>15+</h3>
+                        <p>Years of Expertise</p>
+                    </div>
+                </div>
+                <a href="#" class="tour-link">
+                    <span>Take a Virtual Tour of the facility</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help">
+        <h1>The human care labortaries Advantages</h1>
+
+        <div class="firstcard">
+            <img src="images/l.png" alt="logo">
+            <h2>R&D FOCUSED</h2>
+            <p>our dedicated labortary teams work tirelessly on noval formulation development to ensuer market leading
+                effficiency</p>
+        </div>
+
+        <div class="secondcard">
+            <img src="images/logo1.png" alt="logo">
+            <h2>Quality Control</h2>
+            <p>Every batch undergoes rigorous 3rd-Party testing for purity, potency , and safety before leaving our
+                facility</p>
+        </div>
+
+        <div class="thirdcard">
+            <img src="images/logo2.png" alt="logo">
+            <h2>compliance</h2>
+            <p>Fully compliant with international health standards and regional pharmaceutical regulations</p>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.payment-option:hover {
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+}
+
+.payment-option.selected {
+    border-color: #123d68;
+    background-color: #f0f6fc;
+}
+
+.payment-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #123d68;
+    cursor: pointer;
+}
+
+.payment-option span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.account-details {
+    display: none;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    margin-top: 20px;
+    border-left: 4px solid #123d68;
+    animation: fadeIn 0.3s ease;
+}
+
+.account-details h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.account-details p {
+    color: #475569;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.account-details strong {
+    color: #0f172a;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#screenshotGroup {
+    display: none;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    margin-top: 20px;
+    animation: fadeIn 0.3s ease;
+}
